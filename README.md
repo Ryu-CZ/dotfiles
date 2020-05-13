@@ -15,13 +15,15 @@ https://github.com/alacritty/alacritty
 https://github.com/ranger/ranger
 
 For image preview:
+
 ```
 sudo python3 -m pip install ueberzug
 ```
 
 #### Theme generator
+https://github.com/dylanaraps/pywal
+
 ```
 sudo python3 -m pip install pywal
-sudo python3 -m pip install ueberzug
 ```
 
