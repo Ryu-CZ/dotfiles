@@ -1,0 +1,92 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+
+background_opacity: 0.84
+
+window:
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels. If both are zero this
+  # setting is ignored.
+  dimensions:
+    columns: 124
+    lines: 42
+
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is not scaled by
+  # DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 8
+    y: 4
+
+
+  # Window decorations
+  #
+  # Available values:
+  # - full: borders and title bar
+  # - none: neither borders nor title bar
+  decorations: none
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # startup_mode: Windowed
+
+scrolling:
+  # maximum number of lines in the scrollback buffer. Specifying '0' will
+  # disable scrolling.
+  history: 1024
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 1
+
+# Font configuration (changes require restart)
+font:
+  # Normal (roman) font face
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
+
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: "Bold"
+
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: "Medium Italic"
+   
+  bold_italic:
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: "JetBrainsMono Nerd Font"
+    style: "Bold Italic"
+
+  # Point size of the font
+  size: 10.0
+  
+# Bindings
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+key_bindings:
+  - { key: V,        mods: Control|Shift,           action: Paste            }
+  - { key: C,        mods: Control|Shift,           action: Copy             }
+  - { key: T,        mods: Control|Alt,             action: SpawnNewInstance }
+  - { key: F11,                                     action: ToggleFullscreen }
+  - { key: PageUp,   mods: Shift,                   action: ScrollToTop      }
+  - { key: PageUp,                                  action: ScrollPageDown   }
+  - { key: PageDown, mods: Shift,                   action: ScrollToBottom   }
+  - { key: PageDown,                                action: ScrollPageDown   }
+  - { key: Key0,     mods: Control,                 action: ResetFontSize    }
+  - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
+  - { key: Add,      mods: Control,                 action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,                 action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,                 action: DecreaseFontSize }
+  - { key: Down,     mods: Control,                 action: Minimize         }
+  
+
