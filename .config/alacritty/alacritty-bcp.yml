@@ -1,14 +1,6 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 
-env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
-
+background_opacity: 0.82
 
 window:
   # Window dimensions (changes require restart)
@@ -23,7 +15,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.80
+  opacity: 0.82
 
   # Window padding (changes require restart)
   #
@@ -32,6 +24,7 @@ window:
   padding:
     x: 8
     y: 4
+
 
   # Window decorations
   #
@@ -66,13 +59,6 @@ colors:
   # the default background. When set to `true` all cells will be transparent
   # regardless of their background color.
   transparent_background_colors: true
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-# background_opacity: 0.8
-
 
 # Font configuration (changes require restart)
 font:
